@@ -24242,7 +24242,7 @@ Peer.prototype.sendFile = function (file) {
     };
     // override onclose
     dc.onclose = function () {
-        console.log('sender received transfer');
+        //console.log('sender received transfer');
         sender.emit('complete');
     };
     return sender;
@@ -24581,7 +24581,7 @@ SimpleWebRTC.prototype.joinRoom = function (name, cb) {
     var self = this;
     this.roomName = name;
     this.connection.emit('join', name, function (err, roomDescription) {
-        console.log('join CB', err, roomDescription);
+        //console.log('join CB', err, roomDescription);
         if (err) {
             self.emit('error', err);
         } else {
